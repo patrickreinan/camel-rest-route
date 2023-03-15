@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  restroute:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+    - RESTROUTE_URL=https://eotcssf1jwvtbyb.m.pipedream.net
+    - RESTROUTE_PATH=/test
+    - RESTROUTE_METHOD=get
+    - CAMEL_SERVLET_MAPPING_CONTEXTPATH=/*
